@@ -1,0 +1,296 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    ofstream file("index.html");
+
+    file << R"(<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aden Khan CV</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#eef2f7;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:30px auto;
+display:grid;
+grid-template-columns:300px 1fr;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+border-radius:15px;
+overflow:hidden;
+}
+
+.left{
+background:#0f172a;
+color:white;
+padding:30px;
+}
+
+.right{
+padding:30px;
+}
+
+img{
+width:150px;
+height:150px;
+border-radius:50%;
+display:block;
+margin:auto;
+}
+
+h1{
+text-align:center;
+margin-top:15px;
+}
+
+h3{
+text-align:center;
+color:#60a5fa;
+margin-bottom:20px;
+}
+
+.section{
+margin-top:25px;
+}
+
+.section h2{
+color:#60a5fa;
+margin-bottom:10px;
+}
+
+.right h2{
+color:#1e3a8a;
+margin-bottom:10px;
+}
+
+.card{
+background:#f8fafc;
+padding:15px;
+margin-bottom:15px;
+border-left:5px solid royalblue;
+border-radius:8px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.skill{
+background:royalblue;
+color:white;
+padding:10px;
+border-radius:5px;
+text-align:center;
+}
+
+ul{
+padding-left:20px;
+}
+
+a{
+color:#60a5fa;
+text-decoration:none;
+}
+
+.footer{
+text-align:center;
+margin-top:30px;
+color:gray;
+}
+
+@media(max-width:768px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<img src="https://via.placeholder.com/150">
+
+<h1>Aden Khan</h1>
+
+<h3>Software Engineering Student</h3>
+
+<div class="section">
+
+<h2>Contact</h2>
+
+<p>📍 Haripur, Pakistan</p>
+<p>📞 +92 334 1057384</p>
+<p>✉️ adenkhan2025@gmail.com</p>
+
+</div>
+
+<div class="section">
+
+<h2>Languages</h2>
+
+<ul>
+
+<li>English</li>
+<li>Urdu</li>
+<li>Hindko</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Links</h2>
+
+<p><a href="https://github.com/account">GitHub</a></p>
+<p><a href="https://www.linkedin.com/in/aden-khan-747364397">LinkedIn</a></p>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<h2>Profile</h2>
+
+<p>
+BS Software Engineering student with knowledge of Programming Fundamentals,
+Object-Oriented Programming, C++, Data Structures and problem solving.
+Interested in software development and Formula 1 technologies.
+</p>
+
+<br>
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>BS Software Engineering</h3>
+
+<p>Pak-Austria Fachhochschule Institute of Applied Sciences and Technology</p>
+
+<p>2025 - 2029</p>
+
+</div>
+
+<div class="card">
+
+<h3>SSC & HSSC (Pre-Medical)</h3>
+
+<p>Pakistan Public School & College</p>
+
+<p>2019 - 2023</p>
+
+</div>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">C++</div>
+<div class="skill">Programming Fundamentals</div>
+<div class="skill">OOP</div>
+<div class="skill">Data Structures</div>
+<div class="skill">Logic Building</div>
+<div class="skill">Microsoft Office</div>
+<div class="skill">VS Code</div>
+<div class="skill">Problem Solving</div>
+
+</div>
+
+<br>
+
+<h2>Project</h2>
+
+<div class="card">
+
+<h3>Fuel Station Management System</h3>
+
+<p>
+Developed in C++ using Object-Oriented Programming concepts.
+</p>
+
+</div>
+
+<h2>Certificates</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Driving Licence</li>
+<li>EXPO Participation Certificate</li>
+<li>AFAQ Participation Certificate</li>
+
+</ul>
+
+</div>
+
+<h2>Hobbies</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Formula 1</li>
+<li>Badminton</li>
+<li>Music</li>
+<li>Baking</li>
+<li>Travel</li>
+
+</ul>
+
+</div>
+
+<div class="footer">
+
+Created using C++ and HTML
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>)";
+
+    file.close();
+
+    cout << "HTML CV Generated Successfully!" << endl;
+    cout << "Open index.html in your browser." << endl;
+
+    return 0;
+}
